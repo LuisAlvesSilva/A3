@@ -51,20 +51,29 @@ html{
     border: 1px solid #fff;
     border-radius: 30px;
     background-color: #000;
+    position: relative;
 }
 
-
-.instru{
-    height: 15vh;
-    width: 90vw;
-    font-size: 50px;
+.jogo, #teste{
+    font-size: 55px;
+    border-radius: 10px;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 .mouseInstru{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    font-size: 20px;
+    padding: 10px;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.mouseInstru p {
+    font-size: 50px;
 }
 
 .material-symbols-outlined {
