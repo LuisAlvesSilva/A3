@@ -1,4 +1,5 @@
 let botaoStart1 = false;
+console.log(botaoStart1)
 
 document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('teste').addEventListener('click', () => {
@@ -17,6 +18,10 @@ function start(botaoStart1) {
     }
 }
 
+let frase2 = "Segurança"
+
 function jogo() {
-    alert('teste');
+    console.log(botaoStart1)
+
+    document.getElementById("frase").innerHTML = frase2
 }
