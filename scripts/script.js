@@ -1,5 +1,5 @@
 let botaoStart1 = false;
-console.log(botaoStart1)
+console.log(botaoStart1);
 
 document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('teste').addEventListener('click', () => {
@@ -10,18 +10,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function botaoStart() {
     botaoStart1 = true;
-}
+};
 
 function start(botaoStart1) {
-    if (botaoStart1 == true) {
+    if (botaoStart1) {
         jogo();
+    } else {
+        return;
     }
-}
-
-let frase2 = "Segurança"
+};
 
 function jogo() {
-    console.log(botaoStart1)
-
-    document.getElementById("frase").innerHTML = frase2
-}
+    console.log(botaoStart1);
+    let jogim = document.getElementsByClassName("jogo");
+    if (jogim.length > 0) {
+        jogim[0].style.backgroundImage = 'url("/styles/Images/!.png")';
+        jogim[0].style.backgroundRepeat = 'no-repeat';
+    }
+    let teste = document.getElementById("teste")
+    teste.style.display = 'none'
+};
