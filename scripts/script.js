@@ -1,66 +1,42 @@
-let botaoStart1 = false;
-let fase = 1;
-let score = 0;
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+    const questions = document.querySelectorAll(".question");
+    const result = document.getElementById("result");
+    const congratsImage = document.getElementById("congrats-image");
+    let currentQuestionIndex = 0;
 
-let pergunta1 = "x";
-let pergunta2 = "xx";
-let pergunta3 = "xxx";
-let pergunta4 = "xxxx";
-let pergunta5 = "xxxxx";
+    function showNextQuestion() {
+        questions[currentQuestionIndex].classList.remove("active");
+        congratsImage.style.display = "none";
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            questions[currentQuestionIndex].classList.add("active");
+        } else {
+            result.textContent = "Você completou o jogo!";
+        }
+    }
 
+    questions[currentQuestionIndex].classList.add("active");
 
-console.log(botaoStart1);
+    document.querySelectorAll(".option").forEach(option => {
+        option.addEventListener("click", () => {
+            if (option.getAttribute("data-answer") === "correct") {
+                result.textContent = "Correto! Boa escolha.";
+                result.style.color = "green";
+                congratsImage.style.display = "block";
 
+                setTimeout(() => {
+                    result.textContent = "";
+                    showNextQuestion();
+                }, 2000); // Mostra a imagem de parabéns por 2 segundos
+            } else {
+                result.textContent = "Errado! Tente novamente.";
+                result.style.color = "red";
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.getElementById('teste').addEventListener('click', () => {
-        botaoStart();
-        start(botaoStart1);
+                setTimeout(() => {
+                    result.textContent = "";
+                }, 2000); // Mantém a mensagem de erro por 2 segundos
+            }
+        });
     });
 });
-
-
-function botaoStart() {
-    botaoStart1 = true;
-};
-
-function start(botaoStart1) {
-    if (botaoStart1 == true) {
-        seletorFase(fase);
-    } else {
-        return;
-    }
-};
-
-function seletorFase(){
-    switch (fase) {
-        case 1:
-            console.log("Fase 1:", pergunta1);
-            fase++;
-            return console.log(fase);
-        case 2:
-            console.log("Fase 2:", pergunta2);
-            fase++;
-            return console.log(fase);
-        case 3:
-            console.log("Fase 3:", pergunta3);
-            fase++;
-            return console.log(fase);
-        case 4:
-            console.log("Fase 4:", pergunta4);
-            fase++;
-            return console.log(fase);
-        case 5:
-            console.log("Fase 5:", pergunta5);
-            fase++;
-            return console.log(fase);
-        default:
-        console.log("Todas as fases foram concluídas.");
-    }
-}
-
-
-function jogo() {
-    console.log(botaoStart1);
-    console.log(seletorFase());
-};

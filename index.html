@@ -3,33 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APP - Rota Segura</title>
+    <title>Game - Rota Segura</title>
     <link rel="stylesheet" href="/styles/style.css">
     <script src="/scripts/script.js"></script>
     <meta name="author" content="Eu sou o Goku!">
 </head>
-<body>
-    <div class="container">
-        <div class="topTela">
-            <img src="/styles/Images/images-removebg-preview.png" id="logo">
-            <span id="frase">Rota Segura</span>
-            <nav class="material-symbols-outlined">
-                info
-            </nav>
-        </div>
-        
-        <div class="jogo">
-            <button id="teste">Start</button>
-        </div>
 
-        <div class="instru">
-            <div class="mouseInstru">
-                <p>Mouse</p>
-                <span class="material-symbols-outlined">
-                    mouse
-                </span>
+<body>
+    <div class="info-icon-container">
+        <span class="info-icon">ℹ️</span>
+        <div class="tooltip">
+            <p><strong>Instruções:</strong></p>
+            <p>Escolha a placa correta para cada pergunta. Boa sorte!</p>
+            <p><strong>Criador:</strong> Luis Alves</p>
+            <p><strong>Criador:</strong> Caio Martin</p>
+            <p><strong>Criador:</strong> Hugo</p>
+            <p><strong>Criador:</strong> Lukas</p>
+            <p><strong>Criador:</strong> Romulo</p>
+        </div>
+    <div class="game-container">
+        <h1>Rota Segura</h1>
+        </div>
+        <div id="question-container">
+            <div class="question active">
+                <p>Qual é a placa de "Pare"?</p>
+                <div class="options">
+                    <img src="/styles/Images/" alt="Opção 1" class="option" data-answer="wrong">
+                    <img src="/styles/Images/" alt="Opção 2" class="option" data-answer="wrong">
+                    <img src="/styles/Images/" alt="Opção 3" class="option" data-answer="correct">
+                    <img src="/styles/Images/" alt="Opção 4" class="option" data-answer="wrong">
+                </div>
+            </div>
+            <div class="question">
+                <p>Qual é a placa de "Proibido Estacionar"?</p>
+                <div class="options">
+                    <img src="/styles/Images/" alt="Opção 1" class="option" data-answer="correct">
+                    <img src="/styles/Images/" alt="Opção 2" class="option" data-answer="wrong">
+                    <img src="/styles/Images/" alt="Opção 3" class="option" data-answer="wrong">
+                    <img src="/styles/Images/" alt="Opção 4" class="option" data-answer="wrong">
+                </div>
+            </div>
+            <div class="question">
+                <p>Qual é a placa de "Velocidade Máxima"?</p>
+                <div class="options">
+                    <img src="/styles/Images/" alt="Opção 1" class="option" data-answer="wrong">
+                    <img src="/styles/Images/" alt="Opção 2" class="option" data-answer="correct">
+                    <img src="/styles/Images/" alt="Opção 3" class="option" data-answer="wrong">
+                    <img src="/styles/Images/" alt="Opção 4" class="option" data-answer="wrong">
+                </div>
+            </div>
+            <div class="question">
+                <p>Qual é a placa de "Cruzamento à Direita"?</p>
+                <div class="options">
+                    <img src="/styles/Images/" alt="Opção 1" class="option" data-answer="wrong">
+                    <img src="/styles/Images/" alt="Opção 2" class="option" data-answer="wrong">
+                    <img src="/styles/Images/" alt="Opção 3" class="option" data-answer="correct">
+                    <img src="/styles/Images/" alt="Opção 4" class="option" data-answer="wrong">
+                </div>
             </div>
         </div>
+        <img id="congrats-image" src="/styles/Images/!.png" style="display: none;">
+        <p id="result"></p>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
