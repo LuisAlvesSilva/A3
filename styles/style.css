@@ -10,6 +10,7 @@ body {
     align-items: center;
     background-color: #f4f4f4;
     position: relative;
+    background-image: url("/styles/Images/rua.jpg");
 }
 
 .pixelify-sans{
