@@ -10,8 +10,11 @@ body {
     align-items: center;
     background-color: #f4f4f4;
     position: relative;
-    background-image: url("/styles/Images/rua.jpg");
+    background-image: url("/styles/Images/rua.png");
     font-size: 30px;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    cursor: default;
 }
 
 .start-screen {
@@ -20,8 +23,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    width: 100vw;
+    background-color: #f4f4f45d;
     text-align: center;
+}
+
+.start-screen h1{
+    text-shadow: 0.1em 0.1em 1px rgba(255, 255, 255, 1);
 }
 
 #start-button {
@@ -33,13 +41,13 @@ body {
     color: #000;
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 1ms;
     border-radius: 10px;
     box-shadow: 0.1em 0.1em 10px rgba(0, 0, 0, 1);
 }
 
 #start-button:hover {
-    background-color: #0056b3;
+    background-color: #49ff01;
 }
 
 .pixelify-sans{
@@ -76,13 +84,16 @@ body {
 }
 
 .info-icon {
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
+    background-color: #f4f4f45d;
+    border-radius: 30px;
 }
 
 .tooltip {
     display: none;
     position: absolute;
+    font-size: 15px;
     top: 30px;
     right: 0;
     background: #fff;
@@ -99,7 +110,7 @@ body {
 
 .game-container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.432);
+    background: rgba(255, 255, 255);
     padding: 20px;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
