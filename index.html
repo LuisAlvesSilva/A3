@@ -11,7 +11,7 @@
 
 <body>
     <div class="info-icon-container">
-        <span class="info-icon">ℹ️</span>
+        <button class="info-icon">ℹ️</button>
         <div class="tooltip">
             <p><strong>Instruções:</strong></p>
             <p>Escolha a placa correta para cada pergunta. Boa sorte!</p>
@@ -62,7 +62,8 @@
                 </div>
             </div>
         </div>
-        <img id="congrats-image" src="/styles/Images/acertou.gif" style="display: none;">
+        <div class="overlay"></div>
+        <img id="congrats-image" src="/styles/Images/acertou.gif" alt="Parabéns!">
         <p id="result"></p>
     </div>
     <script src="script.js"></script>
