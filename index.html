@@ -6,13 +6,23 @@
     <link rel="shortcut icon" type="imagex/png" href="/styles/Images/Logo.png">
     <title>Game - Rota Segura</title>
     <link rel="stylesheet" href="/styles/style.css">
-    <script src="/scripts/script.js"></script>
+    <script src="/scripts/script.js" defer></script>
     <meta name="author" content="Eu sou o Goku!">
 </head>
-
 <body>
-    <div class="logo"><img class="logo-icon" title="Bem Vindo a Rota Segura" src="/styles/Images/Logo.png" alt="Logo - Rota Segura">
+    <!-- Tela inicial -->
+    <div id="start-screen" class="start-screen">
+        <h1>Bem-vindo ao Jogo Rota Segura!</h1>
+        <p>Teste seus conhecimentos sobre sinais de trânsito.</p>
+        <button id="start-button">Iniciar Jogo</button>
     </div>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img class="logo-icon" title="Bem Vindo a Rota Segura" src="/styles/Images/Logo.png" alt="Logo - Rota Segura">
+    </div>
+
+    <!-- Título e informações -->
     <h1 class="title">Rota Segura</h1>
     <div class="info-icon-container">
         <button class="info-icon">ℹ️</button>
@@ -26,7 +36,9 @@
             <p><strong>Criador:</strong> Romulo</p><strong>RA:</strong>
         </div>
     </div>
-    <div class="game-container">
+
+    <!-- Jogo -->
+    <div id="game-container" class="game-container" style="display: none;">
         <div id="question-container">
             <div class="question active">
                 <p>Qual é a placa de "Pare"?</p>
@@ -69,6 +81,5 @@
         <img id="congrats-image" src="/styles/Images/acertou.gif" alt="Parabéns!">
         <p id="result"></p>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
